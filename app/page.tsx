@@ -1,12 +1,14 @@
 import CategoryList from "./_components/category-list";
 import Header from "./_components/header";
 import Search from "./_components/search";
-import ProductsList from "./_components/products-list";
-import { Button } from "./_components/ui/button";
-import { ChevronsRightIcon } from "lucide-react";
-import { db } from "./_lib/prisma";
 import PromoBanner from "./_components/promo-banner";
+import ProductsList from "./_components/products-list";
 import RestaurantList from "./_components/restaurant-list";
+
+import { ChevronsRightIcon } from "lucide-react";
+
+import { Button } from "./_components/ui/button";
+import { db } from "./_lib/prisma";
 
 const Home = async () => {
   const products = await db.product.findMany({
