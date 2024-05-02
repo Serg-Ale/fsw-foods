@@ -133,7 +133,7 @@ const ProductDetails = ({
       </div>
 
       <div className="mt-6 space-y-3">
-        <h3 className="px-5 font-semibold">Sucos</h3>
+        <h3 className="px-5 font-semibold">Outros</h3>
         <ProductsList products={complementaryProducts} />
       </div>
     </div>
