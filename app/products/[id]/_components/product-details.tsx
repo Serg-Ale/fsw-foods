@@ -1,9 +1,9 @@
 "use client";
 
+import CardEntrega from "@/app/_components/card-entrega";
 import DiscountBadge from "@/app/_components/discount-badge";
 import ProductsList from "@/app/_components/products-list";
 import { Button } from "@/app/_components/ui/button";
-import { Card } from "@/app/_components/ui/card";
 import {
   calculateProductTotalPrice,
   formatCurrency,
@@ -96,35 +96,10 @@ const ProductDetails = ({
         </div>
       </div>
       <div className="px-5">
-        <Card className="mt-6 flex justify-around py-3">
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-1 text-muted-foreground">
-              <span className="text-xs">Entrega</span>
-              <BikeIcon size={14} />
-            </div>
-            {Number(product.restaurant.deliveryFee) > 0 ? (
-              <p className="text-sm font-semibold">
-                {formatCurrency(Number(product.restaurant.deliveryFee))}
-              </p>
-            ) : (
-              <p className="text-xs font-semibold">Grátis</p>
-            )}
-          </div>
-
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-1 text-muted-foreground">
-              <span className="text-xs">Tempo</span>
-              <TimerIcon size={14} />
-            </div>
-            {Number(product.restaurant.deliveryFee) > 0 ? (
-              <p className="text-sm font-semibold">
-                {product.restaurant.deliveryTimeMinutes} min
-              </p>
-            ) : (
-              <p className="text-xs font-semibold">Grátis</p>
-            )}
-          </div>
-        </Card>
+        <CardEntrega
+          deliveryFee={product.restaurant.deliveryFee}
+          deliveryTimeMinutes={product.restaurant.deliveryTimeMinutes}
+        />
       </div>
 
       <div className="mt-6 space-y-3 px-5">
