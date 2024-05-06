@@ -1,9 +1,10 @@
 import { Restaurant } from "@prisma/client";
-import { BikeIcon, StarIcon, TimerIcon } from "lucide-react";
+import { BikeIcon, TimerIcon } from "lucide-react";
 import Image from "next/image";
 import { formatCurrency } from "../_helpers/price";
 import Link from "next/link";
 import HeartButton from "./heart-button";
+import RatingBadge from "./rating-badge";
 
 interface RestaurantItemProps {
   restaurant: Restaurant;
@@ -24,10 +25,11 @@ const RestaurantItem = ({ restaurant }: RestaurantItemProps) => {
             className="rounded-lg object-cover"
           />
 
-          <div className="absolute  left-2 top-2 flex items-center gap-[2px] rounded-full bg-primary bg-white px-2 py-[2px] text-black">
-            <StarIcon size={12} className="fill-yellow-400 text-yellow-400" />
-            <span className="text-xs font-semibold">5.0</span>
-          </div>
+          <RatingBadge
+            backgroundColor="primary bg-white"
+            textColor="black"
+            fillColor="yellow-400"
+          />
 
           <HeartButton
             position="right-2 top-2"
