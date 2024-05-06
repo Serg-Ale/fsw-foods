@@ -1,13 +1,26 @@
+import React from "react";
 import { HeartIcon } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "./ui/button"; // Substitua pelo caminho real do seu componente Button
 
-const HeartButton = () => {
+interface HeartButtonProps {
+  position: string;
+  size: string;
+  backgroundColor: string;
+  iconSize: number;
+}
+
+const HeartButton = ({
+  position,
+  size,
+  backgroundColor,
+  iconSize,
+}: HeartButtonProps) => {
   return (
     <Button
-      size={"icon"}
-      className="absolute right-2 top-2 h-7 w-7 rounded-full bg-muted-foreground"
+      size="icon"
+      className={`absolute ${position} h-${size} w-${size} rounded-full bg-${backgroundColor}`}
     >
-      <HeartIcon size={16} className="fill-white" />
+      <HeartIcon size={iconSize} className="fill-white" />
     </Button>
   );
 };

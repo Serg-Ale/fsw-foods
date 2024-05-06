@@ -28,7 +28,13 @@ const RestaurantItem = ({ restaurant }: RestaurantItemProps) => {
             <StarIcon size={12} className="fill-yellow-400 text-yellow-400" />
             <span className="text-xs font-semibold">5.0</span>
           </div>
-          <HeartButton />
+
+          <HeartButton
+            position="right-2 top-2"
+            size="7"
+            backgroundColor="muted-foreground"
+            iconSize={16}
+          />
         </div>
         <div>
           <h3 className="text-sm font-semibold">{restaurant.name}</h3>
