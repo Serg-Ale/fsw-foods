@@ -26,15 +26,14 @@ const RestaurantItem = ({ restaurant }: RestaurantItemProps) => {
           />
 
           <RatingBadge
-            backgroundColor="primary bg-white"
+            backgroundColor="white"
             textColor="black"
-            fillColor="yellow-400"
+            position="absolute left-2 top-2"
           />
 
           <HeartButton
-            position="right-2 top-2"
-            size="7"
-            backgroundColor="muted-foreground"
+            position="absolute right-2 top-2"
+            size="8"
             iconSize={16}
           />
         </div>
