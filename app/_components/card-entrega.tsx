@@ -4,8 +4,8 @@ import { formatCurrency } from "../_helpers/price";
 import { Card } from "./ui/card";
 
 interface CardEntregaProps {
-  deliveryFee: string;
-  deliveryTimeMinutes: string;
+  deliveryFee: number;
+  deliveryTimeMinutes: number;
 }
 
 const CardEntrega = ({
