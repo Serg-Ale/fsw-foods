@@ -13,7 +13,7 @@ const CardEntrega = ({
   deliveryTimeMinutes,
 }: CardEntregaProps) => {
   return (
-    <Card className="mt-3 mt-6 flex justify-around rounded-3xl py-3">
+    <Card className="mt-6 flex justify-around rounded-3xl py-3">
       <div className="flex flex-col items-center">
         <div className="flex items-center gap-1 text-muted-foreground">
           <span className="text-xs">Entrega</span>
