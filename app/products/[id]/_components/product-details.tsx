@@ -9,12 +9,7 @@ import {
   formatCurrency,
 } from "@/app/_helpers/price";
 import { Prisma } from "@prisma/client";
-import {
-  BikeIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  TimerIcon,
-} from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -96,10 +91,7 @@ const ProductDetails = ({
         </div>
       </div>
       <div className="px-5">
-        <CardEntrega
-          deliveryFee={product.restaurant.deliveryFee}
-          deliveryTimeMinutes={product.restaurant.deliveryTimeMinutes}
-        />
+        <CardEntrega restaurant={product.restaurant} />
       </div>
 
       <div className="mt-6 space-y-3 px-5">
