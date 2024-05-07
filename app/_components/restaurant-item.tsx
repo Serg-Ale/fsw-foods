@@ -5,15 +5,17 @@ import { formatCurrency } from "../_helpers/price";
 import Link from "next/link";
 import HeartButton from "./heart-button";
 import RatingBadge from "./rating-badge";
+import { cn } from "../_lib/utils";
 
 interface RestaurantItemProps {
   restaurant: Restaurant;
+  className?: string;
 }
 
-const RestaurantItem = ({ restaurant }: RestaurantItemProps) => {
+const RestaurantItem = ({ restaurant, className }: RestaurantItemProps) => {
   return (
     <Link
-      className="w-[266px] min-w-[266px]"
+      className={cn("w-[266px] min-w-[266px]", className)}
       href={`/restaurants/${restaurant.id}`}
     >
       <div className="w-full space-y-3">
